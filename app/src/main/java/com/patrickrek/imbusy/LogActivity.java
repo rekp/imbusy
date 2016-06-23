@@ -14,10 +14,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-/**
- * Created by Amux on 6/16/2016.
- */
-public class LogActivity extends AppCompatActivity {
+public class LogActivity extends BaseActivity {
 
     private ArrayList<String> smsList = new ArrayList<String>();
     private ListView mListView;
@@ -32,15 +29,9 @@ public class LogActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-        activity = this;
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_log);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -53,7 +44,11 @@ public class LogActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public void onStart() {
+        super.onStart();
+        activity = this;
+    }
 
     public void updateList(final String newSms) {
         adapter.insert(newSms, 0);

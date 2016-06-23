@@ -12,5 +12,4 @@
     tools:context="com.patrickrek.imbusy.SettingsActivity"
     tools:showIn="@layout/activity_settings">
 
-
 </RelativeLayout>

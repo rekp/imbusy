@@ -13,10 +13,7 @@ import android.widget.Toast;
 
 public class SMSReceiver extends BroadcastReceiver {
 
-
     public void onReceive(Context context, Intent intent) {
-
-
 
         // Get the SMS message received
         final Bundle bundle = intent.getExtras();

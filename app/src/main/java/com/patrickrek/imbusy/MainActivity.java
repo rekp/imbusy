@@ -28,8 +28,6 @@ public class MainActivity extends BaseActivity {
         // Set content view
         setContentView(R.layout.activity_main);
 
-
-
         // Initialize UI elements
         editTextGeneralResponse = (EditText) findViewById(R.id.editTextGeneralResponse);
 
@@ -45,12 +43,8 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-
-
-
         //
         loadData();
-
     }
 
     // Override to remove back button in toolbar
@@ -65,35 +59,6 @@ public class MainActivity extends BaseActivity {
                 toolbar.setVisibility(View.GONE);
             }
         }
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                Intent intent = new Intent(this, SettingsActivity.class);
-                startActivity(intent);
-
-                return true;
-
-            default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
-                return super.onOptionsItemSelected(item);
-        }
-
     }
 
     @Override
